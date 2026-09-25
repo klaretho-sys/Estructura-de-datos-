@@ -10,7 +10,7 @@ namespace BusquedaYModificacion
             // Operaciones: Búsqueda Lineal, Verificación de existencia y Actualización de un elemento en un Array.
 
             int[] codigos = new int[20]; 
-            Console.WriteLine("======= Ingreso de Códigos =======");
+            Console.WriteLine("======= Ingrese  Códigos =======");
             for (int i = 0; i < codigos.Length; i++)
             {
                 Console.Write($"Ingrese el código {i + 1}: ");
@@ -20,7 +20,7 @@ namespace BusquedaYModificacion
             Console.WriteLine(string.Join(", ", codigos));
 
            
-            Console.Write("\nIngrese el código que desea  modificar: ");
+            Console.Write("\nIngrese el código a  modificar: ");
             int codigoBuscado = Convert.ToInt32(Console.ReadLine());
 
             int indiceEncontrado = -1;
