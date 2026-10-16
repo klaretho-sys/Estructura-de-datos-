@@ -7,16 +7,20 @@ namespace ConsoleApp5
     internal class Program
     {
         static void Main()
-        {
-            string ruta = "Potaxies.csv";
 
-            using (StreamWriter sw = new StreamWriter(ruta))
-            {
-                sw.WriteLine("Nombre,Edad,Nota,Asignatura,Profesion,mascotas");
-                sw.WriteLine("Klareth,17,50,Estructura de datos,Ingeniera informatica,1 gato");
-                sw.WriteLine("Jesus,22,45,Calculo 1,Futbolista,3");
-                sw.WriteLine("Mavis,40,100,Ingles,Secretaria,1");
-            }
-            Console.WriteLine("Archivo creado exitosamente.");
+      stirng ruta = "C:\\Users\\Usuario\\Desktop\\potaxie.csv";
+        if (File.Exists(ruta))
+      {
+         string[] lieas = File.ReadAllLines(ruta);
+         foreach (string line in lieas) { 
+    
+         string[] campos = line.Split(',');
+        Console.WriteLine($"Nombre: {campos[0]}, Nota: {campos[2]}");
 
-}   }   }  
+    }
+
+}  
+ using (StreamWriter sw = new StreamWriter("potaxie.csv", append: true))
+{
+    sw.WriteLine("Klareth,17,20");
+}
